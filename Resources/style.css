@@ -1,0 +1,383 @@
+
+* {
+     box-sizing: border-box;
+}
+
+body {
+    background-color: green
+    
+}
+
+/* fonts */
+
+h1, h2 {
+    font-family: 'Cabin', sans-serif;
+    color: whitesmoke;
+}
+
+h4, h5, label {
+    font-family: 'Inter', sans-serif;
+    color: whitesmoke;
+}
+
+p, a {
+    font-family: 'Maitree', serif;
+    color: whitesmoke;
+}
+
+
+/* containers global styling*/
+
+.container {
+    width:100%;
+    min-width: 350px;
+    display: flex;
+}
+ /* global styling for fixed / sticky background */
+
+ .about, .portfolio, .contact {
+    background-image: url("background_sticky.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+ }
+
+/* Navbar styling */
+
+nav {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top:0;
+    width: 100%;
+    border: solid gray 2px;
+    height: 5 rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row nowrap; 
+
+}
+
+nav img.logo {
+    float: left;
+    height: 5rem;
+    width: 5rem ;
+    border-radius: 100px;
+    margin: 5px;
+}
+
+nav h1 {
+    color: whitesmoke;
+    font-size: 2rem;
+    justify-self: center;
+    
+}
+
+nav ul {
+    display:inline-flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    white-space: nowrap;
+}
+
+
+nav ul li {
+    display: block;
+    float: right;
+
+}
+
+nav li a {
+     text-align: center;
+     text-decoration: none;
+     padding: 14px 16px;
+}
+
+nav a:hover {
+    background: #ddd;
+    color: black;
+  }
+
+main {
+    margin-top: 4.688rem;
+}
+
+.menu, .mobileMenu {
+    display: none;
+}
+
+@media only screen and (max-width: 480px) {
+
+    nav li a {
+        display: none;
+   }
+
+   .menu {
+       display: block;
+       margin: 5px;
+       height: 2rem;
+       width: 2rem;
+   }
+
+   .mobileMenu {
+       position: fixed;
+       width: 100%;
+       padding: 0.125rem;
+       background-color: #333;
+       
+   }
+
+   .mobileMenu ul li a {
+       text-decoration: none;
+       line-height: 1.5;
+   }
+
+   .mobileMenu ul li a:hover {
+        background: #ddd;
+        color: black;
+}
+
+    nav h1 {
+        font-size: 1.5rem;
+    }  
+    
+    nav img.logo {
+        height: 3rem;
+        width:3rem;
+    }
+
+    main {
+        margin-top: 3.9rem;
+    }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+
+    nav li a {
+        display: none;
+   }
+
+   img.menu {
+    display: inline;
+    margin: 5px;
+    height: 3rem;
+    width: 3rem;
+    }
+
+    .mobileMenu {
+        display: none;
+        position: fixed;
+        width: 100%;
+        padding: 0.125rem;
+        background-color: #333;
+    }
+ 
+    .mobileMenu ul li a {
+        text-decoration: none;
+        line-height: 1.5;
+    }
+ 
+    .mobileMenu ul li a:hover {
+         background: #ddd;
+         color: black;
+    }
+
+    main {
+        margin-top: 5.85rem;
+    }
+}
+  
+
+
+/* about section styling */
+
+.about {
+    height: 500px;
+    flex-flow: column nowrap;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.about h2, .about p {
+    margin: 10px;
+    background-color: #333;
+    width: 50%;
+    padding: 15px;
+    flex-shrink: 2;
+    
+}
+
+.about h2 {
+    font-size: 2.5rem;
+}
+
+/* services section styling */
+
+.services {
+    height: auto;
+    align-content: center;
+    justify-content: space-evenly;
+    flex-flow: row wrap;  
+}
+
+.services h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    margin: 0.75rem;
+}
+
+.service {
+    display:inline flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 350px;
+    height: 350px;
+}
+
+.service img {
+    width: 75%;
+    height: 75%;
+    align-self: center;
+    border: gray solid 2px;
+    border-radius: 100%;
+}
+
+.service h4 {
+    width: 50%;
+    margin: 0.75rem;
+    background-color: #333;
+    padding: 0.5rem;
+}
+
+/* portfolio section styling */
+
+.portfolio {
+    height: auto;
+    align-content: center;
+    justify-content: space-evenly;
+    flex-flow: row wrap;
+}
+
+.portfolio h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    margin: 0.75rem;
+}
+
+.gallery {
+    display:inline flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 350px;
+    height: 350px;
+}
+
+.gallery img {
+    width: 75%;
+    height: 75%;
+    align-self: center;
+}
+
+.gallery h4 {
+    width: 75%;
+    margin: 0.75rem;
+    background-color: #333;
+    padding: 0.5rem;
+}
+
+/* team section styling */
+
+.team {
+    height: auto;
+    align-content: center;
+    justify-content: space-evenly;
+    flex-flow: row wrap;
+
+}
+
+.team h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    margin: 0.75rem;
+
+}
+
+.team_member {
+    display:inline flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    text-align: center;
+    width: 350px;
+    height: 350px;
+}
+
+.team_member img {
+    width: 75%;
+    height: 75%;
+    align-self: center;
+    border-radius: 75%;
+    border: gray solid 2px;
+}
+
+.team_member p {
+    margin: 0.75rem;
+    background-color: #333;
+    padding: 0.5rem;
+}
+
+/* contact section styling */
+
+.contact {
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+.contact h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    margin: 0.75rem;
+}
+
+.contact .contact_details {
+    font-size: 2rem;
+    background-color: #333;
+    padding: 15px;
+}
+
+.contact .form_div {
+    margin: 1rem;
+    background-color: #333;
+    margin-bottom: 2rem;
+}
+
+.contact .form_div form {
+    display: inline-flex;
+    flex-flow: column wrap;
+    align-items: flex-start;
+    padding: 15px;
+}
+
+/*footer styling */
+
+footer {
+    background-color: #333;
+    border: gray solid 2px;
+    overflow: hidden;   
+}
+
+footer p {
+    padding: 15px;
+}
